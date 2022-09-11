@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+	
+	<title>CalMac Services - Service Status</title>
+		<base href="http://status.calmac.info/" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>CalMac Services | Service Status</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="format-detection" content="telephone=no" /><link href="/themes/disruptionsapp/css/style.css?m=1651574722000" rel="stylesheet" type="text/css" /><script src="/themes/disruptionsapp/scripts/jquery-2.1.4.min.js?m=1651574722000"></script><script src="/themes/disruptionsapp/scripts/jquery-mobile/jquery.mobile.js?m=1651574722000"></script><script src="/themes/disruptionsapp/scripts/pinchzoom.min.js?m=1651574722000"></script><script src="/themes/disruptionsapp/scripts/javascript.js?m=1651574722000"></script><meta property="og:type" content="website" /><meta property="og:title" content="CalMac Services - Service Status" /><meta property="og:url" content="http://status.calmac.info/" /><meta property="og:site_name" content="Service Status" /><meta name="twitter:card" content="summary" /><meta name="twitter:title" content="CalMac Services - Service Status" /><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CalMac Services - Service Status","url":"http://status.calmac.info/"}</script></head>
+
+<body>
+	
+	<script type="text/javascript">
+		$.mobile.loading("show");
+		$("body").addClass("ui-loading");
+	</script>
+	
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WVBG6R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WVBG6R');</script>
+	
+	<div class="loadingpanel" style="display: block;"></div>
+	<div data-role="page">
+
+		<div class="main">
+						<div data-role="header">
+							<a href="#" data-icon="carat-l" data-rel="back">Services</a>
+					<h1 class="heading">Route Details</h1>
+								<a href="#" data-icon="refresh" class="ui-btn-right refresh">Refresh</a>
+						</div>
+
+			<div data-role="content">
+		<div class="detail">
+			<div class="text">
+					<h1 class="heading">ARRAN:</h1>
+					<h2 class="heading">Ardrossan (ARD) - Brodick (BRO)</h2>
+					<h3 class="heading">Normal service</h3>
+					<div class="supplementary">
+					<h3 class="heading">
+							Supplementary information
+						</h3>
+
+						<p><p><span style="font-weight: bold;">Connecting Services</span> - For customers using <a href="https://www.calmac.co.uk/on-board/connecting-services" style="font-weight: bold;">connecting services</a> please note these services do not always guarantee a connection, particularly during times of disruption. We advise that you check both CalMac and connecting service websites prior to travel to ensure you can reach your end destination safely.<br></p><p><span style="font-weight: bold;">Stay Safe</span> - When travelling with us, we strongly recommend our customers follow our <a href="https://www.calmac.co.uk/covid19/faqs/safer-travel-with-calmac">safer travel guidance</a>. Before travel, take a moment to familiarise yourself with the details.<br><br><span style="font-weight: bold;">Payment Information</span> - Contactless payment is quick and easy. If you're travelling with us, please do so using a contactless payment method. We accept MasterCard, Visa, Apple, Google or Samsung Pay. If you need assistance, please speak with a member of staff.<br></p></p>
+
+
+						<p>
+							<strong>Last Updated</strong>:
+							09 Sep 2022 20:05
+						</p>
+					</div>
+				<div class="topbordershadow timetables">
+					<h3 class="heading">
+						Timetables
+					</h3>
+					<div><a href="/summer-timetables/ardrossan-brodick" class="dark">Arran: Ardrossan - Brodick</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".loadingpanel").hide();
+		$("body").removeClass("ui-loading");
+		/* #1039812: Image zooming JS */
+		$(".textblock img").each(function () {
+			new RTP.PinchZoom($(this), {});
+		});
+		$(document).bind("pagechange", function(event, data) {
+			$(".textblock img").each(function () {
+				if ($(this).parent().attr("class") != "pinch-zoom-container") {
+					new RTP.PinchZoom($(this), {});
+				}
+			});
+		});
+	</script>
+</body>
+</html>
