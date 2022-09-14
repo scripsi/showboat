@@ -17,7 +17,7 @@ f=open("config.json","r")
 config=json.loads(f.read())
 f.close()
 
-status_url = 'http://status.calmac.info/?route=06'
+status_url = 'http://status.calmac.info/?route=05'
 
 onboard_led = Pin("LED", Pin.OUT)
 
