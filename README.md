@@ -22,8 +22,8 @@ The LEDs that I am using have the following characteristics:
 
 | Value | Red  | Orange | Yellow | Green |
 | ----- | ---- | ------ | ------ | ----- |
-| V~f~  | 1.9V | 1.9V   | 2.0V   | 2.1V  |
-| I~f~  | 30mA | 30mA   | 20mA   | 30mA  |
+| Vf    | 1.9V | 1.9V   | 2.0V   | 2.1V  |
+| If    | 30mA | 30mA   | 20mA   | 30mA  |
 
 Using an [LED calculator](http://ledcalc.com/) for the correct current limiting resistor at the Pico's voltage of 3.3V gives values in the range 40-65 Ohms, so using 100 Ohm resistors should be safe enough while keeping the LEDs nice and bright. If you use LEDs with different characteristics, choose appropriate current-limiting resistors for them, using a supply voltage of 3.3V.
 
@@ -56,6 +56,12 @@ RESISTOR    )36 3V3             GP3  5(    RESISTOR
 
 This is a very simple circuit. The cathodes of the LEDs are connected directly to the four  ground pads down each side of the Pico W (marked by square-ended pads), and the anodes are connected via current limiting resistors to GPIO pads.
 
+![The front of the prototype with two colums of LEDs](img/prototype-front.jpg)
+
+![The rear of the prototype with the resistors and Pico W](img/prototype-rear.jpg)
+
 I used a small protoboard for my prototype (with a socketed Pico W), with the LEDs mounted on the front and the resistors and Pico W mounted on the rear to keep things looking clean. Arranging the LEDs according to the evenly-spaced ground pads on the Pico W resulted in two neat columns of indicator lights which could be used for the two different ferry routes. The Pico W had its USB port facing downwards because I imagined the device eventually hanging on a wall with the USB power supply cable dangling down from it.
+
+![The prototype board - closeup showing solder joints](img/prototype-board.jpg)
 
 You could always use a different arrangement, and to keep things even simpler it should be possible to solder the components directly onto the Pico W [dead bug style](https://www.instructables.com/Dead-Bug-Prototyping-and-Freeform-Electronics/). **Just make sure that the short lead and/or flat side of each LED (the cathode) is connected to ground on the Pico W and the long lead (anode) is connected via a resistor to one of the GPIO**. 
