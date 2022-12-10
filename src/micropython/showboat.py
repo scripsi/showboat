@@ -160,6 +160,6 @@ while True:
     else:
       get_status(ROUTE2, str(route2_download.content).lower())
       route2_download.close()
-      
+
   time.sleep(refresh_interval)
 

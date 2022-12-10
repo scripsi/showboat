@@ -1,0 +1,9 @@
+#! /bin/bash
+cd ./micropython
+git submodule update --init --recursive
+make -C mpy-cross
+make -C ports/rp2 BOARD=PICO_W submodules
+make -C ports/rp2 BOARD=PICO_W clean
+make -C ports/rp2 BOARD=PICO_W
+cp -u ports/rp2/build-PICO_W/firmware.uf2 ../firmware/micropython/showboat.uf2
+cd ..
