@@ -1,9 +1,14 @@
 #! /bin/bash
-cd ./micropython
-git submodule update --init --recursive
-make -C mpy-cross
-make -C ports/rp2 BOARD=PICO_W submodules
-make -C ports/rp2 BOARD=PICO_W clean
-make -C ports/rp2 BOARD=PICO_W
-cp -u ports/rp2/build-PICO_W/firmware.uf2 ../firmware/micropython/showboat.uf2
-cd ..
+MPDIR="$HOME/dev/micropython"
+PORTDIR="ports/rp2"
+TARGET="PICO_W"
+FIRMDIR="$HOME/scripsi/showboat/firmware/micropython"
+PTOOL="$HOME/dev/pico/bin/picotool"
+
+git submodule update --init --recursive "$MPDIR"
+make -C "$MPDIR"/mpy-cross
+make -C "$MPDIR"/"$PORTDIR" BOARD=$TARGET submodules
+make -C "$MPDIR"/"$PORTDIR" BOARD=$TARGET clean
+make -C "$MPDIR"/"$PORTDIR" BOARD=$TARGET
+cp -u "$MPDIR"/"$PORTDIR"/build-$TARGET/firmware.uf2 "$FIRMDIR"/showboat.uf2
+"$PTOOL" info -a "$FIRMDIR"/showboat.uf2
